@@ -1,5 +1,8 @@
 using Plots
-using Printf
+
+iterations = 5
+animal = "deer"
+fname = "data/pops.csv"
 
 mutable struct Cells
 	field::Vector{Vector{Dict{String, Int64}}}
@@ -115,7 +118,7 @@ function simulate(cells::Cells, size_x::Int64, size_y::Int64)
 end
 
 function read_pops_csv()
-	f = open("pops.csv", "r")
+	f = open(fname, "r")
 	animals_in_cell = Vector{AnimalInCell}()
 	lines = readlines(f)
 	size_string = split(lines[1], ",")
@@ -145,9 +148,6 @@ function read_pops_csv()
 end
 
 cells = read_pops_csv()
-
-iterations = 5
-animal = "deer"
 
 for i = 1:iterations
 	simulate(cells, cells.size_x, cells.size_y)

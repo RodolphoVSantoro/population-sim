@@ -1,7 +1,9 @@
 20,20
 4,8,8,rabbit
-5,9,1,bear
-10,3,2,wolf
-12,5,2,wolf
-12,12,2,deer
-9,9,5,rabbit
+3,9,1,bear
+6,3,2,wolf
+10,3,2,rabbit
+4,5,2,wolf
+5,12,2,deer
+6,9,5,rabbit
+2,14,15,bear
